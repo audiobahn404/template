@@ -1,7 +1,7 @@
 # LaTeX Templates
 A repository of various LaTeX templates for common document types. The goal is to make starting LaTeX documents easier for those who are not very familiar with the language, and faster for those who want to focus on the content as much as possible.
 
-Issues are reserved for bugs and issues with the templates themselves. They are *not* for generic TeX/LaTeX questions or content-based issues. If you have a question about something in TeX/LaTeX, take them to [TeX.sx](tex.stackexchange.com).
+Issues are reserved for bugs and issues with the templates themselves. They are *not* for generic TeX/LaTeX questions or content-based issues. If you have a question about something in TeX/LaTeX, take them to [TeX.sx](https://tex.stackexchange.com).
 
 
 # Template Listing
