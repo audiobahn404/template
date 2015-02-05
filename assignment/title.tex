@@ -1,0 +1,30 @@
+% Fonts and sizes used here are defined in `setup.tex`.
+
+\begin{titlepage}
+% Ensure no other page styles will affect this page
+\thispagestyle{empty}
+% Large margins to make the page appear more full.
+\newgeometry{top=2.4in,bottom=1in,right=1in,left=1in}
+
+% Create the main title display
+\begin{flushleft}
+  {\titlefont
+    \hspace{-0.02cm}{\mainsize\textbf \department}\hspace{0.7cm}
+    {\mainsize \course}\\[0.4cm]
+    {\secondsize \assignment}\\[0.6cm]
+    {\subsize \duedate}\\[0.2cm]
+    {\subsize \student}
+  }
+\vspace{1cm}
+
+\tableofcontents[Contents]
+
+% Notes go flush at the bottom of the page.
+\vfill
+\input{./notes.tex}
+
+
+\restoregeometry
+
+\end{flushleft}
+\end{titlepage}

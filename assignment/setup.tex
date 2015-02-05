@@ -1,0 +1,118 @@
+% setup.tex
+%
+% Document setup.
+%
+% Load in all of the packages that this document uses, configure them to work
+% with the template, then define/redefine any necessary commands.
+%
+% This file should be included immediately after `config.tex`, making it the
+% second line in the main `.tex` file.
+
+
+
+% Layout and structure
+\documentclass[11pt]{article}
+\usepackage[margin=1.0in]{geometry}
+\geometry{letterpaper}
+\usepackage[parfill]{parskip}           % Begin paragraphs with an empty line rather than an indent
+
+
+% Force PDFLaTeX
+\usepackage[pdftex]{graphicx}
+
+
+
+% Utility
+\usepackage{adjustbox}                  % Align item labels at the tops of images
+\usepackage{underscore}                 % Automatically-escaped underscores
+
+
+
+% AMS packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+
+
+% Graphics generation
+\usepackage{tikz}                       % Graph and Automata things
+\usetikzlibrary{arrows,automata,positioning}
+
+
+
+% Font control
+\usepackage[T1]{fontenc}                % Include fonts in the PDF for crisper results
+\usepackage{charter}                    % Better body font
+
+
+
+% Headers
+\usepackage{fancyhdr}                   % Customized headers
+\pagestyle{fancy}
+\fancyhead{}                            % Clear existing header styles
+\fancyfoot{}                            % Clear existing footer styles
+\lhead{\department  \course - \assignment}
+\rhead{\student}
+\lfoot{\leftmark}
+\cfoot{\thepage}
+\rfoot{\rightmark}
+
+\renewcommand{\headrulewidth}{2pt}      % Header border
+\renewcommand{\footrulewidth}{1pt}      % Footer border
+\setlength{\headheight}{15pt}           % Fixes `\headheight too small` error
+
+
+
+% Lipsum generator
+% \usepackage{lipsum}
+
+
+
+% Title section font and sizes
+\newcommand*{\titlefont}{\fontfamily{qhv}\selectfont} % TeX - Gyre Heros
+\newcommand*{\mainsize}{\fontsize{40}{42}\selectfont}
+\newcommand*{\secondsize}{\fontsize{28}{32}\selectfont}
+\newcommand*{\subsize}{\fontsize{16}{24}\selectfont}
+
+
+
+% Custom section headers
+% Section
+\usepackage{titlesec}
+\titleformat{\section}[hang]{
+    \usefont{T1}{qhv}{b}{n}\selectfont} % "qhv" - TeX Gyre Heros, "b" - bold
+    {}
+    {0em}
+    {\hspace{-0.4pt}\Large \thesection\hspace{0.6em}}
+
+% Subsection
+\usepackage{titlesec}
+\titleformat{\subsection}[hang]{
+    \usefont{T1}{qhv}{b}{n}\selectfont} % "qhv" - TeX Gyre Heros, "b" - bold
+    {}
+    {0em}
+    {\hspace{-0.4pt}\large \thesubsection\hspace{0.6em}}
+
+
+
+% Use a custom name for the Table of Contents
+\makeatletter
+\renewcommand{\tableofcontents}[1][\contentsname]{%
+  \part*{#1}
+  \@starttoc{toc}
+}
+\makeatother
+
+
+
+% Equations will always have consistent spacing
+\abovedisplayshortskip=\abovedisplayskip
+
+
+
+% A variant of the `proof` environment from `amsthm` to give larger margins to proofs
+% and make them feel more compact and isolated from the body text.
+\newenvironment{Proof}[1][Proof]
+  {\proof[#1]\leftskip=1.4cm\rightskip=1.4cm}
+  {\endproof}
